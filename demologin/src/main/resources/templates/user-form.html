@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+</head>
+<body>
+<h3>User Form</h3>
+
+<form th:action="@{/processUserForm}" th:object="${user}" method="POST">
+    First name: <input type="text" th:field="*{firstName}"/>
+
+    <br><br>
+
+    Last name: <input type="text" th:field="*{lastName}"/>
+
+    <br><br>
+
+    Country:
+
+    <select th:field="*{country}"/>
+
+    <option th:value="Turkey">Turkey</option>
+    <option th:value="Brazil">Brazil</option>
+    <option th:value="France">France</option>
+    <option th:value="Germany">Germany</option>
+    <option th:value="India">India</option>
+
+    </select>
+
+    <br><br>
+    <input type="submit" value="Submit"/>
+
+</form>
+</body>
+</html>
