@@ -15,11 +15,13 @@ public class UserController {
     @Value("${countries}")
     private List<String> countries;
 
+
     @GetMapping("/login")
     public String form(Model theModel){
         User theUser= new User();
         theModel.addAttribute("user",theUser);
 
+        theModel.addAttribute("countries",countries);
         return "user-form";
     }
 
