@@ -26,11 +26,23 @@
 
     <select th:field="*{country}"/>
 
-    <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}" />
+    <option th:each="tempCountry : ${countries}"
+            th:value="${tempCountry}"
+            th:text="${tempCountry}" />
 
     </select>
 
     <br><br>
+
+    Gender
+
+    <input type="radio" th:field="*{gender}"
+                        th:each="tempGen : ${gender}"
+                        th:value="${tempGen}"
+                        th:text="${tempGen}" />
+
+    <br><br>
+
     <input type="submit" value="Submit"/>
 
 </form>

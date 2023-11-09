@@ -4,6 +4,9 @@ public class User {
     private String firstName;
     private String lastName;
     private String country;
+    private String gender;
+
+
 
     public User() {
     }
@@ -30,5 +33,13 @@ public class User {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
